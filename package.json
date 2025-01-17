@@ -4,6 +4,7 @@
   "description": "web503-nodejs-base",
   "main": "server.js",
   "scripts": {
+    "dev": "vite",
     "start": "vite"
   },
   "keywords": [],
