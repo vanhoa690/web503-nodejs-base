@@ -1,12 +1,10 @@
 import express from "express";
+import mongoose from "mongoose";
 const app = express();
-
-// Middleware để phân tích JSON và form data
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+// Kết nối db
+mongoose.connect(`mongodb://127.0.0.1:27017/thi_nodejs`);
 
-app.get("/", (req, res) => {
-  res.json("home");
-});
+// routers
 
 export const viteNodeApp = app;
